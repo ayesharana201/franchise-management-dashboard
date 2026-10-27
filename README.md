@@ -10,7 +10,16 @@ A Laravel web application for managing franchise locations, royalty payments, co
 ![Franchise Management Dashboard](screenshots/dashboard.png)
 
 ### Royalties Management
-![Franchise Royalties Management](screenshots/royalties.png)
+![Royalties Management](screenshots/royalties.png)
+
+### Compliance Management
+![Compliance Management](screenshots/compliance.png)
+
+### Inventory Management
+![Inventory Management](screenshots/inventory.png)
+
+### Supply Orders
+![Supply Orders](screenshots/orders.png)
 
 ## Features
 
