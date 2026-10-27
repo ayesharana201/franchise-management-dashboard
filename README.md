@@ -4,6 +4,12 @@ A Laravel web application for managing franchise locations, royalty payments, co
 
 **Technology stack:** Laravel 13, PHP 8.3+, Blade, Vue 3, Tailwind CSS, Laravel Sanctum, MySQL/PostgreSQL/SQLite, Docker, and GitHub Actions.
 
+## Dashboard Preview
+
+![Franchise Management Dashboard](screenshots/dashboard.png)
+
+*Dashboard preview of the franchise management application.*
+
 ## Features
 
 | # | Feature | Description |
@@ -199,6 +205,12 @@ routes/
 tests/
   Feature/                Feature tests
   Unit/                   Unit tests
+
+
+## Dashboard Preview
+
+![Franchise Management Dashboard](screenshots/dashboard.png)
+
 
 docs/                     Project documentation
 ```
