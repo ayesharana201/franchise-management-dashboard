@@ -1,0 +1,380 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+    color-scheme: dark;
+    --page: #0b1120;
+    --sidebar: #080e1b;
+    --surface: #131d2e;
+    --border: #29384e;
+    --text: #e8eef8;
+    --muted: #98a8bf;
+    --blue: #60a5fa;
+}
+
+html, body {
+    min-height: 100%;
+    background: var(--page) !important;
+    color: var(--text) !important;
+    font-family: var(--font-sans);
+}
+
+aside {
+    background: var(--sidebar) !important;
+    color: #cbd5e1 !important;
+    border-right: 1px solid #1c293c;
+}
+
+aside nav a {
+    margin-bottom: 4px;
+    padding: 10px 12px !important;
+    border-radius: 9px !important;
+    color: #a8b6ca !important;
+}
+
+aside nav a:hover {
+    background: #17243a !important;
+    color: #fff !important;
+}
+
+aside nav a.bg-indigo-600,
+main button.bg-indigo-600,
+main a.bg-indigo-600 {
+    background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+    color: white !important;
+}
+
+main {
+    background: var(--page);
+    color: var(--text);
+}
+
+main > header {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #1d2a3e;
+}
+
+main > header h1 {
+    color: #f8fafc;
+    font-weight: 700;
+    letter-spacing: -.035em;
+}
+
+main h2, main h3 {
+    color: #edf3fc;
+}
+
+main .bg-white,
+main .bg-slate-50 {
+    background-color: var(--surface) !important;
+}
+
+main .border-slate-200,
+main .border-slate-300,
+main .border-slate-100 {
+    border-color: var(--border) !important;
+}
+
+main .text-slate-800,
+main .text-slate-900,
+main .text-gray-900 {
+    color: #e8eef8 !important;
+}
+
+main .text-slate-700,
+main .text-slate-600,
+main .text-gray-700,
+main .text-gray-600 {
+    color: #c0ccdc !important;
+}
+
+main .text-slate-500,
+main .text-slate-400,
+main .text-gray-500 {
+    color: var(--muted) !important;
+}
+
+main a:not([class*="bg-"]) {
+    color: var(--blue);
+}
+
+main table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #dce6f4;
+}
+
+main thead {
+    background: #18253a !important;
+}
+
+main thead th {
+    color: #a9bad1 !important;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+main tbody tr:hover {
+    background: #1a2940 !important;
+}
+
+main input:not([type="checkbox"]):not([type="radio"]),
+main select,
+main textarea {
+    background-color: #0d1728 !important;
+    color: #e8eef8 !important;
+    border-color: #34445c !important;
+    border-radius: 8px;
+    color-scheme: dark;
+}
+
+main input:focus,
+main select:focus,
+main textarea:focus {
+    outline: none;
+    border-color: #60a5fa !important;
+    box-shadow: 0 0 0 3px rgb(96 165 250 / 15%);
+}
+
+main .text-emerald-600,
+main .text-green-600 {
+    color: #34d399 !important;
+}
+
+main .text-red-600,
+main .text-rose-600 {
+    color: #fb7185 !important;
+}
+
+main .text-amber-600,
+main .text-yellow-600 {
+    color: #fbbf24 !important;
+}
+
+main .text-indigo-600,
+main .text-blue-600 {
+    color: #60a5fa !important;
+}
+
+main .bg-emerald-50 {
+    background: #102d2b !important;
+}
+
+main .text-emerald-800 {
+    color: #6ee7b7 !important;
+}
+
+main .bg-red-50 {
+    background: #351b29 !important;
+}
+
+main .text-red-800 {
+    color: #fda4af !important;
+}
+
+main .grid > div.bg-white {
+    background: linear-gradient(145deg, #172338, #111b2b) !important;
+    border-color: #293a53 !important;
+    box-shadow: 0 8px 22px rgb(0 0 0 / 12%);
+}
+
+* {
+    scrollbar-color: #34445c #0b1120;
+    scrollbar-width: thin;
+}
+
+@media (max-width: 767px) {
+    main {
+        padding: 18px !important;
+    }
+
+    main table {
+        min-width: 620px;
+    }
+}
+
+/* Dashboard KPI accent borders */
+main .grid > div.bg-white[class*="border-t-sky-400"] {
+    border-top-color: #38bdf8 !important;
+}
+main .grid > div.bg-white[class*="border-t-blue-400"] {
+    border-top-color: #60a5fa !important;
+}
+main .grid > div.bg-white[class*="border-t-emerald-400"] {
+    border-top-color: #34d399 !important;
+}
+main .grid > div.bg-white[class*="border-t-rose-400"] {
+    border-top-color: #fb7185 !important;
+}
+main .grid > div.bg-white[class*="border-t-violet-400"] {
+    border-top-color: #a78bfa !important;
+}
+
+/* Dashboard: explicit Needs attention colors */
+main li[class*="bg-rose-500/5"] {
+    background-color: rgb(244 63 94 / 12%) !important;
+    border-color: rgb(251 113 133 / 45%) !important;
+}
+main li[class*="bg-sky-500/5"] {
+    background-color: rgb(14 165 233 / 12%) !important;
+    border-color: rgb(56 189 248 / 45%) !important;
+}
+main li[class*="bg-amber-500/5"] {
+    background-color: rgb(245 158 11 / 12%) !important;
+    border-color: rgb(251 191 36 / 45%) !important;
+}
+
+/* Dashboard: larger monthly sales chart */
+.dashboard-sales-chart {
+    height: 300px !important;
+    gap: 16px !important;
+    padding-top: 20px !important;
+}
+.dashboard-sales-bar {
+    width: 100% !important;
+    max-width: 76px !important;
+    min-height: 8px !important;
+    border-radius: 8px 8px 2px 2px !important;
+    box-shadow: 0 0 16px rgb(56 189 248 / 12%);
+}
+
+/* Dashboard sales chart: reduce unused space */
+.dashboard-sales-chart {
+    height: 260px !important;
+    gap: 10px !important;
+    padding-top: 12px !important;
+    align-items: flex-end !important;
+}
+
+.dashboard-sales-bar {
+    max-width: none !important;
+    width: 100% !important;
+    border-radius: 7px 7px 2px 2px !important;
+    box-shadow: 0 0 14px rgb(56 189 248 / 16%);
+}
+
+/* Monthly sales: taller bars and better vertical balance */
+.dashboard-sales-chart {
+    height: 340px !important;
+    gap: 10px !important;
+    padding-top: 8px !important;
+    align-items: flex-end !important;
+}
+
+.dashboard-sales-chart > div {
+    min-height: 0;
+}
+
+.dashboard-sales-bar {
+    max-width: none !important;
+    width: 100% !important;
+    min-height: 12px !important;
+    border-radius: 7px 7px 2px 2px !important;
+    box-shadow: 0 0 18px rgb(56 189 248 / 18%);
+}
+
+/* Keep Monthly sales independent of Needs attention height */
+.dashboard-sales-panel {
+    align-self: start !important;
+    min-height: 0 !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-chart {
+    height: 280px !important;
+}
+
+/* Slightly thinner monthly sales bars */
+.dashboard-sales-bar {
+    width: 78% !important;
+    max-width: 58px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Final proportional chart layout */
+.dashboard-sales-panel .dashboard-sales-chart {
+    height: auto !important;
+    min-height: 0 !important;
+    gap: 12px !important;
+    padding-top: 8px !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-bar {
+    max-width: 58px !important;
+    min-height: 4px !important;
+    flex-shrink: 0;
+}
+
+/* Fix flat bars: give the chart a definite plotting height */
+.dashboard-sales-panel .dashboard-sales-chart {
+    height: 290px !important;
+    min-height: 290px !important;
+    gap: 12px !important;
+    padding-top: 8px !important;
+    align-items: flex-end !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-chart > div {
+    height: 100% !important;
+    min-height: 0 !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-chart > div > div:nth-child(2) {
+    height: 220px !important;
+    flex-shrink: 0 !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-bar {
+    max-width: 58px !important;
+    width: 78% !important;
+    min-height: 4px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Fix flat bars: give the chart a definite plotting height */
+.dashboard-sales-panel .dashboard-sales-chart {
+    height: 290px !important;
+    min-height: 290px !important;
+    gap: 12px !important;
+    padding-top: 8px !important;
+    align-items: flex-end !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-chart > div {
+    height: 100% !important;
+    min-height: 0 !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-chart > div > div:nth-child(2) {
+    height: 220px !important;
+    flex-shrink: 0 !important;
+}
+
+.dashboard-sales-panel .dashboard-sales-bar {
+    max-width: 58px !important;
+    width: 78% !important;
+    min-height: 4px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Dashboard layout: keep sales panel independent of Needs Attention */
+@media (min-width: 1024px) {
+    .dashboard-sales-panel {
+        align-self: start !important;
+        height: fit-content !important;
+        min-height: 0 !important;
+    }
+
+    .dashboard-sales-panel .dashboard-sales-chart {
+        height: 290px !important;
+        min-height: 290px !important;
+    }
+}
